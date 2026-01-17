@@ -60,31 +60,36 @@ Table of content:
 @import url("../fonts/style.css");
 @import url("../fonts/et-line-font-style.css");
 @import url("../css/icofont/icofont.min.css");
-
-* {
-  --body-font: "Open Sans", Helvetica, Arial, sans-serif;
-  --body-font-size: 16px;
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: optional;
+    src: url('/fonts/inter-v18-cyrillic_cyrillic-ext_greek_greek-ext_latin_latin-ext-500.woff2') format('woff2');
+  }
+:root {
+  --body-font: Inter, sans-serif;
   --body-font-color: #707070;
-  --body-font-color-dark: rgba(255, 255, 255, .75);
+  --body-font-color-dark: rgba(255, 255, 255, 0.75);
   --body-font-weight: 400;
 
-  --heading-font: "Quicksand", Helvetica, Arial, sans-serif;  
+  --heading-font: Inter, sans-serif;
   --heading-font-weight: 600;
   --heading-font-color: #161c2d;
   --heading-text-transform: none;
 
   --alt-font-1: "";
-  
+
   --h1-font-size: 60px;
   --h1-font-weight: var(--heading-font-weight);
-  --h1-letter-spacing: -.05em;
+  --h1-letter-spacing: -0.05em;
   --h1-line-height: 1.15em;
   --h1-margin-bottom: 20px;
 
   --h2-font: var(--heading-font);
   --h2-font-size: 48px;
   --h2-font-weight: var(--heading-font-weight);
-  --h2-letter-spacing: -.025em;
+  --h2-letter-spacing: -0.025em;
   --h2-line-height: 1.2em;
   --h2-margin-bottom: 30px;
 
@@ -122,17 +127,21 @@ Table of content:
   --bg-light: #F8F9FA;
   --bg-dark-1: #161c2d;
   --bg-dark-2: #111111;
-  --bg-dark-3: #1e1e1e;  
+  --bg-dark-3: #1e1e1e;
   --bg-dark-1-rgb: 16, 16, 16;
   --bg-grey: #eeeeee;
-  --bg-gradient-1: 0deg, rgba(var(--primary-color-rgb), .1) 0%, rgba(var(--secondary-color-rgb), .2) 100%;
+
+  --bg-gradient-1: 0deg,
+    rgba(var(--primary-color-rgb), 0.1) 0%,
+    rgba(var(--secondary-color-rgb), 0.2) 100%;
+
   --swiper-theme-color: var(--secondary-color);
+
   --rounded-1: 12px;
   --button-rounded: 30px;
-  --border-color:#bbbbbb;
-  --container-max-width:1240px;
+  --border-color: #bbbbbb;
+  --container-max-width: 1240px;
 }
-
 
 .bg-dark,.bg-dark-1{background-color: var(--bg-dark-1) !important}
 .bg-dark-2{background-color: var(--bg-dark-2) !important}
@@ -13214,3 +13223,5 @@ img {
                 font-size: 0.8rem;
             }
         }
+
+        
